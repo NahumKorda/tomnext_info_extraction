@@ -1,0 +1,27 @@
+pdf_extraction:
+  description: >
+    Open {file_path}, extract its text and convert it to markdown.
+  expected_output: >
+    Markdown-formatted text.
+  agent: pdf_reader
+
+executive_extraction:
+  description: >
+    In the document text identify and extract executive managers or directors.
+  expected_output: >
+    Plain list of personal names.
+  agent: executive_extractor
+
+information_retrieval:
+  description: >
+    Search the Internet for additional information regarding the performance of the extracted executive managers and directors.
+  expected_output: >
+    Summary of relevant, retrieved information per each individual separately.
+  agent: search_agent
+
+executive_assessment:
+  description: >
+    Assess the competence and quality of each of the extracted executive managers or directors combining the information from the document and the information retrieved from the Internet.
+  expected_output: >
+    Plain list of personal names.
+  agent: executive_quality_evaluator
